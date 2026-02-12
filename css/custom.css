@@ -216,9 +216,10 @@ a:focus {
 	padding-left: 0px;
 }
 
-.section-team {
-	display: flex;
-	flex-direction: row;
+.section-team{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .btn-default {
