@@ -222,73 +222,66 @@ a:focus {
     align-items: center;
 }
 
-/* Container styling for the section */
-.our-programs-section {
-    background-color: #f8f9fa; /* Light grey background to make white cards stand out */
-    padding: 60px 0;
-}
-
-/* The White Card with Leaf Shape */
-.program-white-card {
-    background: #ffffff;
-    /* Curves only top-left and bottom-right */
-    border-radius: 60px 0 60px 0; 
-    padding: 50px 30px;
-    height: 100%;
-    
-    /* Perfect Centering */
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    justify-content: center;
+/* Base Card Style */
+.program-card {
+    background: #fff;
+    padding: 40px 25px;
     text-align: center;
-    
-    /* Clean white look with a soft shadow instead of a border */
-    border: none;
+    border-radius: 60px 0 60px 0; /* Creates that unique leaf shape */
+    border: 2px solid #f0f0f0; /* Subtle default border */
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); /* Smooth easing */
+    height: 100%;
+    position: relative;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease-in-out;
 }
 
-/* Hover effect for depth */
-.program-white-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+/* Hover Animation State */
+.program-card:hover {
+	transform: scale3d(10px);
+    transform: translateY(-10px); /* Lifts the card up */
+    border-color: #FF5E20; /* Changes border to school's gold/yellow */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1); /* Deeper shadow on hover */
 }
 
-/* Centered Icon Box */
-.icon-wrapper {
-    width: 80px;
-    height: 80px;
-    border-radius: 20px;
+/* Icon Styling */
+.icon-box {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 25px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 25px;
-    font-size: 32px;
+    border-radius: 20px;
+    font-size: 24px;
     color: white;
-    /* This ensures the icon stays centered within the wrapper */
+    transition: transform 0.3s ease;
 }
 
-/* Card Typography */
-.program-white-card h3 {
-    font-size: 1.3rem;
+/* Animate icon inside card on hover */
+.program-card:hover .icon-box {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Color Classes for Icons */
+.bg-yellow { background-color: #ffc107; }
+.bg-purple { background-color: #6f42c1; }
+.bg-orange { background-color: #fd7e14; }
+.bg-dark   { background-color: #343a40; }
+
+/* Typography */
+.program-card h4 {
     font-weight: 700;
-    color: #333;
     margin-bottom: 15px;
+    color: #333;
 }
 
-.program-white-card p {
+.program-card p {
     font-size: 0.95rem;
     color: #666;
     line-height: 1.6;
-    margin: 0;
 }
 
-/* Apply Shaivam Logo Colors ONLY to the icons */
-.col-lg-3:nth-child(1) .icon-wrapper { background-color: #FFD200; } /* Yellow */
-.col-lg-3:nth-child(2) .icon-wrapper { background-color: #7B3FAD; } /* Purple */
-.col-lg-3:nth-child(3) .icon-wrapper { background-color: #FF5E20; } /* Orange */
-.col-lg-3:nth-child(4) .icon-wrapper { background-color: #2D3436; } /* Dark Grey */
+
 
 /* Feature List Styling */
 .expertise-feature-list {
@@ -3521,7 +3514,7 @@ header.main-header .header-sticky.active {
 	align-items: center;
 	gap: 20px 40px;
 	border-top: 1px solid var(--dark-divider-color);
-	margin-top: 40px;
+	margin-top: 20px;
 	padding-top: 40px;
 }
 
@@ -3532,6 +3525,7 @@ header.main-header .header-sticky.active {
 .expertise-image-video-box {
 	position: relative;
 	height: 100%;
+	padding: 70px;
 }
 
 .expertise-image-video-box::before {
