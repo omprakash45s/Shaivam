@@ -177,6 +177,10 @@ a:focus {
 	background-color: transparent;
 }
 
+.img-fluid{
+
+}
+
 .reveal {
 	position: relative;
 	display: -webkit-inline-box;
@@ -3030,6 +3034,7 @@ header.main-header .header-sticky.active {
 .main-footer {
 	position: relative;
 	padding: 100px 0 0;
+	margin-top: 20px;
 	margin-bottom: 20px;
 	overflow: hidden;
 }
@@ -3246,6 +3251,7 @@ header.main-header .header-sticky.active {
 	background-size: cover;
 	padding: 285px 0 160px;
 	margin-top: 20px;
+	margin-bottom: 20px;
 	overflow: hidden;
 }
 
@@ -4093,12 +4099,46 @@ header.main-header .header-sticky.active {
 /***    20. Programs Page css	  ***/
 /************************************/
 
-.page-programs {
-	padding: 100px 0 70px;
+/* Styling for the icon at the top of the description */
+.program-icon {
+    width: 70px;
+    height: 70px;
+    background: #003366; 
+    border-radius: 50%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.page-programs .program-item {
-	background: linear-gradient(321deg, var(--secondary-color) 1.2%, var(--bg-color) 98.98%);
+.program-icon img {
+    width: 40px; /* Adjust based on your SVG size */
+    height: auto;
+}
+
+/* Optional: Add a hover effect to the icon */
+.row:hover .program-icon {
+    transform: scale(1.2);
+    transition: 0.3s ease-in-out;
+}
+
+.program-title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #003366;
+}
+
+/* Ensure descriptions are spaced well */
+.program-detailed-content {
+    padding: 20px;
+}
+
+.program-detailed-image .image-anime img {
+    width: 100%;
+    height: auto;
+    border-radius: 200px 30px 200px 30px; 
+    border: 8px solid #ffffff;
+    transition: all 0.5s ease-in-out;
 }
 
 /************************************/
