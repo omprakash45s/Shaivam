@@ -225,7 +225,7 @@ a:focus {
 
 /* Page Container (if not using Bootstrap's default) */
 .containerr {
-    max-width: 1200px;
+    max-width: 800px;
     margin: 0 auto;
     padding-left: 20px;
     padding-right: 20px;
@@ -236,16 +236,15 @@ a:focus {
     display: flex;
     flex-wrap: wrap;
     margin-top: 50px;
-    /* This creates the 'gap' effect using standard grid gutters */
     margin-left: -15px; 
     margin-right: -15px;
 }
 
 /* Add padding to the columns to create the gap between cards */
 .round [class*="col-"] {
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-bottom: 30px; /* Vertical gap between rows */
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 70px; 
 }
 
 /* Card Container */
@@ -257,17 +256,16 @@ a:focus {
     height: 100%;
     display: flex;
     flex-direction: column;
-    /* REMOVED overflow: hidden to ensure the number is visible at -30px */
     overflow: visible; 
     transition: all 0.3s ease;
 }
 
-/* We move the overflow: hidden here so the image still follows the card curves */
+
 .post-featured-image {
     width: 100%;
     height: 280px; 
     overflow: hidden; 
-    border-radius: 40px 40px 0 0; /* Keeps top corners rounded */
+    border-radius: 40px 40px 0 0;
 }
 
 .post-featured-image img {
@@ -280,9 +278,9 @@ a:focus {
 .card-number {
     position: absolute;
     top: 280px; 
-    left: -30px; /* Shifted further left */
+    left: -40px; /* Shifted further left */
     transform: translateY(-50%);
-    font-size: 150px;
+    font-size: 130px;
     font-weight: 800;
     color: #e5e2e2; 
     -webkit-text-stroke: 1.5px #5e5a5a; 
@@ -303,66 +301,76 @@ a:focus {
 }
 
 
-/* Base Card Style */
-.program-card {
-    background: #fff;
-    padding: 40px 25px;
-    text-align: center;
-    border-radius: 60px 0 60px 0; /* Creates that unique leaf shape */
-    border: 2px solid #f0f0f0; /* Subtle default border */
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); /* Smooth easing */
-    height: 100%;
+/* The container that provides the 3D perspective */
+.program-card-wrapper {
+    background-color: transparent;
+    perspective: 1000px;
+    height: 350px;
+}
+
+/* This container holds the front and back */
+.program-card-inner {
     position: relative;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    cursor: pointer;
 }
 
-/* Hover Animation State */
-.program-card:hover {
-	transform: scale3d(10px);
-    transform: translateY(-10px); /* Lifts the card up */
-    border-color: #FF5E20; /* Changes border to school's gold/yellow */
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1); /* Deeper shadow on hover */
+/* Do the flip when hovering */
+.program-card-wrapper:hover .program-card-inner {
+    transform: rotateY(180deg);
 }
 
-/* Icon Styling */
-.icon-box {
-    width: 70px;
-    height: 70px;
-    margin: 0 auto 25px;
+/* Style both sides */
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    border-radius: 15px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-radius: 20px;
-    font-size: 24px;
-    color: white;
-    transition: transform 0.3s ease;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
-/* Animate icon inside card on hover */
-.program-card:hover .icon-box {
-    transform: scale(1.1) rotate(5deg);
-}
-
-/* Color Classes for Icons */
-.bg-yellow { background-color: #ffc107; }
-.bg-purple { background-color: #6f42c1; }
-.bg-orange { background-color: #fd7e14; }
-.bg-dark   { background-color: #343a40; }
-
-/* Typography */
-.program-card h4 {
-    font-weight: 700;
-    margin-bottom: 15px;
+/* Front Side Styling */
+.card-front {
+    background-color: #ffffff;
     color: #333;
 }
 
-.program-card p {
-    font-size: 0.95rem;
-    color: #666;
-    line-height: 1.6;
+/* Back Side Styling */
+.card-back {
+    background-color: #f8f9fa;
+    color: #333;
+    transform: rotateY(180deg); /* Pre-rotated so it faces away */
 }
 
+/* Icon Box Styling */
+.icon-box {
+    width: 80px;
+    height: 80px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    color: white;
+    font-size: 30px;
+}
 
+/* Color Classes */
+.bg-yellow { background-color: #ffcc00; }
+.bg-purple { background-color: #8e44ad; }
+.bg-orange { background-color: #f39c12; }
+.bg-dark   { background-color: #2c3e50; }
 
 /* Feature List Styling */
 .expertise-feature-list {
@@ -1410,6 +1418,7 @@ header.main-header .header-sticky.active {
 
 .program-item-content h2 {
 	font-size: 20px;
+	text-align: center;
 }
 
 .program-item-content h2 a {
@@ -1418,6 +1427,7 @@ header.main-header .header-sticky.active {
 
 .program-item-content p {
 	margin: 10px 0 0;
+	text-align: center;
 }
 
 .program-item-image a,
@@ -2594,6 +2604,7 @@ header.main-header .header-sticky.active {
 	max-width: 480px;
 	border-radius: 20px;
 	overflow: hidden;
+	border-radius: 70px 0px 70px 0px;
 }
 
 .faq-cta-content-box {
@@ -2700,6 +2711,8 @@ header.main-header .header-sticky.active {
 	border: 1px solid var(--divider-color);
 	border-radius: 10px;
 	margin-bottom: 30px;
+	background-color: linear-gradient(321deg, var(--secondary-color) 1.2%, var(--bg-color) 98.98%);
+	border-radius: 30px 10px 30px 10px;
 	overflow: hidden;
 	transition: all 0.3s ease-in-out;
 }
