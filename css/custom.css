@@ -140,6 +140,7 @@ a:focus {
 }
 
 .container {
+	padding-top: 20px;
 	max-width: 1500px;
 }
 
@@ -221,6 +222,86 @@ a:focus {
     flex-direction: row;
     align-items: center;
 }
+
+/* Page Container (if not using Bootstrap's default) */
+.containerr {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* Use 'row' logic for the container to handle grid spacing */
+.round {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    /* This creates the 'gap' effect using standard grid gutters */
+    margin-left: -15px; 
+    margin-right: -15px;
+}
+
+/* Add padding to the columns to create the gap between cards */
+.round [class*="col-"] {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 30px; /* Vertical gap between rows */
+}
+
+/* Card Container */
+.custom-card {
+    background: #f9f9f9;
+    border: 1px solid #5e5a5a;
+    border-radius: 40px; 
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* REMOVED overflow: hidden to ensure the number is visible at -30px */
+    overflow: visible; 
+    transition: all 0.3s ease;
+}
+
+/* We move the overflow: hidden here so the image still follows the card curves */
+.post-featured-image {
+    width: 100%;
+    height: 280px; 
+    overflow: hidden; 
+    border-radius: 40px 40px 0 0; /* Keeps top corners rounded */
+}
+
+.post-featured-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Updated Card Number */
+.card-number {
+    position: absolute;
+    top: 280px; 
+    left: -30px; /* Shifted further left */
+    transform: translateY(-50%);
+    font-size: 150px;
+    font-weight: 800;
+    color: #e5e2e2; 
+    -webkit-text-stroke: 1.5px #5e5a5a; 
+    visibility: visible;
+    opacity: 1; 
+    z-index: 10;
+    line-height: 1;
+    pointer-events: none;
+    font-family: sans-serif;
+}
+
+/* Adjust Content Padding */
+.post-content {
+    padding: 40px 30px 45px 80px; 
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
 
 /* Base Card Style */
 .program-card {
