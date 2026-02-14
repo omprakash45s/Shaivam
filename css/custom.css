@@ -68,6 +68,8 @@ html,
 body {
 	width: 100%;
 	overflow-x: clip;
+	padding: 0;
+	margin: 0;
 }
 
 body {
@@ -142,6 +144,7 @@ a:focus {
 .container {
 	padding-top: 20px;
 	max-width: 1500px;
+	margin: 0;
 }
 
 .container,
@@ -317,6 +320,11 @@ a:focus {
     transition: transform 0.6s;
     transform-style: preserve-3d;
     cursor: pointer;
+    border: 5px solid transparent; 
+    border-radius: 10px 30px 10px 30px;
+    background-image: linear-gradient(white, white), linear-gradient(to right, orange, blue, yellow);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
 }
 
 /* Do the flip when hovering */
@@ -3122,11 +3130,15 @@ header.main-header .header-sticky.active {
 /************************************/
 
 .main-footer {
-	position: relative;
-	padding: 100px 0 0;
-	margin-top: 20px;
-	margin-bottom: 20px;
-	overflow: hidden;
+    position: relative;
+    padding: 100px 0 0;
+    margin-top: 20px;
+    margin-bottom: 0 !important; /* Removes the bottom gap */
+    overflow: hidden;
+    display: block;
+    width: 100%;
+	display: flex;
+	flex-shrink: 0;
 }
 
 .main-footer::before {
@@ -3622,6 +3634,7 @@ header.main-header .header-sticky.active {
 	position: relative;
 	height: 100%;
 	padding: 70px;
+	border-radius: 20px;
 }
 
 .expertise-image-video-box::before {
@@ -3648,6 +3661,7 @@ header.main-header .header-sticky.active {
 	height: 100%;
 	aspect-ratio: 1 / 0.68;
 	object-fit: cover;
+	border-radius: 20px;
 }
 
 .play-video-circle {
