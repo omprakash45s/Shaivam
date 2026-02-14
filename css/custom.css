@@ -4189,33 +4189,30 @@ header.main-header .header-sticky.active {
 /***    20. Programs Page css	  ***/
 /************************************/
 
-/* Styling for the icon at the top of the description */
-.program-icon {
-    width: 70px;
+.img-head {
+    display: flex;          
+    flex-direction: row;   
+    align-items: center;   
+    gap: 20px;              
+    margin-bottom: 20px;   
+}
+
+.img-head img {
+    width: 70px;            
     height: 70px;
-    background: #003366; 
-    border-radius: 50%; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.program-icon img {
-    width: 40px; /* Adjust based on your SVG size */
-    height: auto;
-}
-
-/* Optional: Add a hover effect to the icon */
-.row:hover .program-icon {
-    transform: scale(1.2);
-    transition: 0.3s ease-in-out;
+    background-color: #003366; 
+    border-radius: 50%;     
+    padding: 15px;          
+    object-fit: contain;    
+    flex-shrink: 0;         
 }
 
 .program-title {
+    margin: 0;           
     font-size: 36px;
     font-weight: 700;
-    margin-bottom: 15px;
     color: #003366;
+    line-height: 1.1;       
 }
 
 /* Ensure descriptions are spaced well */
@@ -4229,6 +4226,24 @@ header.main-header .header-sticky.active {
     border-radius: 200px 30px 200px 30px; 
     border: 8px solid #ffffff;
     transition: all 0.5s ease-in-out;
+}
+
+.two-boxx {
+    display: flex;        
+    gap: 15px;             
+    margin-top: 20px;      
+}
+
+.info-box {
+    color: #333;               
+    padding: 10px 25px;        
+    border-radius: 20px;       
+    border: 1px solid #003366; 
+    font-size: 18px;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /************************************/
