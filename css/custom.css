@@ -325,11 +325,8 @@ a:focus {
     transition: transform 0.6s;
     transform-style: preserve-3d;
     cursor: pointer;
-    border: 5px solid transparent; 
+    border: 6px solid #404141;
     border-radius: 10px 30px 10px 30px;
-    background-image: linear-gradient(white, white), linear-gradient(to right, orange, blue, yellow);
-    background-origin: border-box;
-    background-clip: padding-box, border-box;
 }
 
 /* Do the flip when hovering */
@@ -777,11 +774,12 @@ header.main-header .header-sticky.active {
 .navbar-brand {
 	padding: 0;
 	margin: 0;
-	width: 90px;
+	width: 80px;
 	height: 60px;
 	overflow: visible;
 	display: flex;
 	align-items: center;
+	justify-items: center;
 	justify-content: flex-start;
 	/* Keep it left-aligned horizontally, but center vertically */
 }
@@ -1357,7 +1355,7 @@ header.main-header .header-sticky.active {
 /* Parent Container */
 .our-program {
     position: relative;
-    padding: 100px 20px;
+    padding: 20px 20px;
     background-color: #FFFFFF; 
     overflow: visible; 
 }
@@ -1365,13 +1363,14 @@ header.main-header .header-sticky.active {
 
 .program-item {
     border-radius: 20px; 
-    padding: 30px; 
+    padding: 10px 30px; 
     box-shadow: 0px 10px 30px rgba(36, 33, 33, 0.08);
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center; 
     text-align: center; 
+	gap: 20px;
     transition: all 0.3s ease-in-out;
     overflow: hidden; 
 }
@@ -1438,7 +1437,7 @@ header.main-header .header-sticky.active {
 }
 
 .program-item-content h2 {
-	font-size: 20px;
+	font-size: 25px;
 	text-align: center;
 }
 
