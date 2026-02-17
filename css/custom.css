@@ -600,7 +600,7 @@ a:focus {
 
 .bg-section {
 	width: 100%;
-	max-width: 1880px;
+	max-width: 2000px;
 	background: linear-gradient(321deg, var(--secondary-color) 1.2%, var(--bg-color) 98.98%);
 	border-radius: 20px;
 	margin: 0 auto;
@@ -1355,7 +1355,7 @@ header.main-header .header-sticky.active {
 /* Parent Container */
 .our-program {
     position: relative;
-    padding: 20px 20px;
+    padding: 20px 0px;
     background-color: #FFFFFF; 
     overflow: visible; 
 }
