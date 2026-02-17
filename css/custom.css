@@ -771,6 +771,18 @@ header.main-header .header-sticky.active {
 }
 
 
+.nav-link {
+  text-decoration: none;
+  padding: 5px 0;
+  margin: 0 15px;
+  display: inline-block;
+  position: relative;
+}
+
+.nav-link.active {
+  border-bottom: 2px solid #f7f4f3; 
+}
+
 .navbar-brand {
 	padding: 0;
 	margin: 0;

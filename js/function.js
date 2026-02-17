@@ -355,17 +355,20 @@
         window.addEventListener("load", initHeadingAnimation);
     }
 
-	/* Parallaxie js */
-	/* var $parallaxie = $('.parallaxie');
-	if($parallaxie.length && ($window.width() > 1024))
-	{
-		if ($window.width() > 768) {
-			$parallaxie.parallaxie({
-				speed: 0.55,
-				offset: 0,
-			});
-		}
-	} */
+	// NAVBAR
+	document.addEventListener("DOMContentLoaded", function() {
+		const currentPath = window.location.pathname.split("/").pop();
+		const navLinks = document.querySelectorAll('.nav-link');
+
+		navLinks.forEach(link => {
+			if (link.getAttribute('href') === currentPath) {
+			link.classList.add('active');
+			}
+			if (currentPath === "" && link.getAttribute('href') === "index.html") {
+			link.classList.add('active');
+			}
+		});
+	});
 
 	/* Zoom Gallery screenshot */
 	$('.gallery-items').magnificPopup({
