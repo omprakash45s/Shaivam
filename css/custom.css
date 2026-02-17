@@ -1036,6 +1036,16 @@ header.main-header .header-sticky.active {
 	overflow: hidden;
 }
 
+.heroo{
+	position: relative;
+	background-image: url('../images/hero-bg-image.png');
+	padding: 225px 0 100px;
+	min-height: 85vh;
+	align-content: center;
+	margin-top: 20px;
+	overflow: hidden;
+}
+
 .hero::before {
 	content: '';
 	position: absolute;
