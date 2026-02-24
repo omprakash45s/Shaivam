@@ -374,8 +374,6 @@
     //button-gallery
 	
 
-	
-
 	/* Contact form validation */
 	var $contactform = $("#contactForm");
 	$contactform.validator({focus: false}).on("submit", function (event) {

@@ -470,23 +470,9 @@
                                 <div class="swiper-slide">
                                     <div class="image-gallery-item">
                                         <div class="gallery-image photo-gallery">
-                                            <a href="images/gallery-1.jpg" data-cursor-text="View">
+                                            <a href="images/class-1.png" data-cursor-text="View">
                                                 <figure>
-                                                    <img src="images/gallery-1.jpg" alt="Play Time">
-                                                </figure>
-                                            </a>
-                                        </div>
-                                        <div class="gallery-item-title">
-                                            <h3>Fun Activities</h3>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="image-gallery-item">
-                                        <div class="gallery-image photo-gallery">
-                                            <a href="images/gallery-2.jpg" data-cursor-text="View">
-                                                <figure>
-                                                    <img src="images/gallery-2.jpg" alt="Classroom Fun">
+                                                    <img src="images/class-1.png" alt="Classroom Fun">
                                                 </figure>
                                             </a>
                                         </div>
@@ -498,9 +484,9 @@
                                 <div class="swiper-slide">
                                     <div class="image-gallery-item">
                                         <div class="gallery-image photo-gallery">
-                                            <a href="images/gallery-3.png" data-cursor-text="View">
+                                            <a href="images/festive-1.JPG" data-cursor-text="View">
                                                 <figure>
-                                                    <img src="images/gallery-3.png" alt="Festivals">
+                                                    <img src="images/festive-1.JPG" alt="Festivals">
                                                 </figure>
                                             </a>
                                         </div>
@@ -512,9 +498,9 @@
                                 <div class="swiper-slide">
                                     <div class="image-gallery-item">
                                         <div class="gallery-image photo-gallery">
-                                            <a href="images/gallery-4.jpg" data-cursor-text="View">
+                                            <a href="images/class-2.png" data-cursor-text="View">
                                                 <figure>
-                                                    <img src="images/gallery-4.jpg" alt="Learning">
+                                                    <img src="images/class-2.png" alt="Learning">
                                                 </figure>
                                             </a>
                                         </div>
@@ -526,9 +512,9 @@
                                 <div class="swiper-slide">
                                     <div class="image-gallery-item">
                                         <div class="gallery-image photo-gallery">
-                                            <a href="images/gallery-5.jpg" data-cursor-text="View">
+                                            <a href="images/work-1.JPG" data-cursor-text="View">
                                                 <figure>
-                                                    <img src="images/gallery-5.jpg" alt="Creativity">
+                                                    <img src="images/work-1.JPG" alt="Creativity">
                                                 </figure>
                                             </a>
                                         </div>
@@ -788,7 +774,7 @@
                                         <div class="testimonial-item">
                                             <div class="testimonial-item-image">
                                                 <figure class="image-anime">
-                                                    <img src="images/testimonial-image-1.jpg" alt="Parent">
+                                                    <img src="" alt="Parent">
                                                 </figure>
                                             </div>
                                             <div class="testimonial-item-body">
@@ -801,17 +787,12 @@
                                                         <i class="fa-solid fa-star"></i>
                                                     </div>
                                                     <div class="testimonial-item-content">
-                                                        <p>"My child loves coming to school every single day. The
-                                                            teachers are caring, the environment is safe, and the
-                                                            activities are thoughtfully designed for young children.
-                                                            We’ve seen so much improvement in her communication and
-                                                            confidence."</p>
+                                                        <p>"Wonderful place for toddlers to learn, explore, develop curiosity. Shaivam provides beautifully designed and meaningful activities giving young minds a chance to learn while playing.  The parent toddler program helps toddlers to channelise their energy from a very young age. I would recommend it for all the young kids."</p>
                                                     </div>
                                                 </div>
                                                 <div class="testimonial-item-footer">
                                                     <div class="testimonial-author-content">
-                                                        <h3>Priya Sharma</h3>
-                                                        <p>Parent</p>
+                                                        <h3>Mansi Gupta</h3>
                                                     </div>
                                                     <div class="testimonial-item-quote">
                                                         <img src="images/testimonial-item-quote-accent.svg" alt="Quote">
@@ -824,7 +805,7 @@
                                         <div class="testimonial-item">
                                             <div class="testimonial-item-image">
                                                 <figure class="image-anime">
-                                                    <img src="images/testimonial-image-2.jpg" alt="Parent">
+                                                    <img src="" alt="Parent">
                                                 </figure>
                                             </div>
                                             <div class="testimonial-item-body">
@@ -837,16 +818,14 @@
                                                         <i class="fa-solid fa-star"></i>
                                                     </div>
                                                     <div class="testimonial-item-content">
-                                                        <p>The curriculum here is perfect for early development. It’s
-                                                            heartening to see our daughter learn Indian values alongside
-                                                            modern education. We couldn't be happier with our choice.
+                                                        <p>Excellent, thoughtful programmes for toddlers and parents. My 2 year old niece attended their classes and she enjoyed so 
+                                                            much and learnt so much. Complete revamp of the traditional way of teaching. 5/5 would recommend.
                                                         </p>
                                                     </div>
                                                 </div>
                                                 <div class="testimonial-item-footer">
                                                     <div class="testimonial-author-content">
-                                                        <h3>Sunita Iyer</h3>
-                                                        <p>Family Member</p>
+                                                        <h3>Surabhi Rakhecha</h3>
                                                     </div>
                                                     <div class="testimonial-item-quote">
                                                         <img src="images/testimonial-item-quote-accent.svg" alt="Quote">
@@ -1029,6 +1008,17 @@
     <script src="js/jquery.mb.YTPlayer.min.js"></script>
     <script src="js/wow.min.js"></script>
     <script src="js/function.js"></script>
+
+    <script>
+        $('.photo-gallery').magnificPopup({
+            delegate: 'a', // targets the <a> tags inside
+            type: 'image',
+            gallery: {
+                enabled: true,
+                tCounter: '%curr% of %total%' // This creates the "7 of 12"
+            }
+        });
+    </script>
 </body>
 
 </html>
