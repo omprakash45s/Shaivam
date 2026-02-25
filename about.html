@@ -295,11 +295,15 @@
                                 <div class="approach-item-info">
                                     <div class="approach-item-content">
                                         <h3>Our Mission</h3>
-                                        <p>To foster holistic development by integrating the independence of the
-                                            Montessori model with the play-based foundation of NEP 2020</p>
+                                        <p class="approach-text">To foster holistic development by integrating the independence of the
+                                            Montessori model with the play-based foundation of NEP 2020...</p>
                                     </div>
                                     <div class="approach-item-btn">
-                                        <a href="contact.html" class="btn-default">Contact Us</a>
+                                        <a href="javascript:void(0)" 
+                                            class="btn-default" 
+                                            onclick="openMissionModel()">
+                                            Read More
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -315,11 +319,30 @@
                         </div>
                         <!-- Approach Item End -->
                     </div>
+                    <div id="missionPopup" class="custom-modal">
+                        <div class="modal-content-custom mission-modal-bg">
+                            <span class="close-btn" onclick="closeMissionModal()">&times;</span>
+                            
+                            <div class="vision-modal-layout">
+                                <div class="vision-modal-text">
+                                    <div class="mission-icon-box">
+                                        <img src="images/icon-approach-item-1.svg" alt="Mission Icon">
+                                    </div>
+                                    <h3>Our Mission</h3>
+                                    <p>To foster holistic development by integrating the independence of the Montessori model with the play-based foundation of NEP 2020.</p>
+                                    <p>While many schools may embrace Montessori or Waldorf theories, access is often limited to a privileged few. At Little Luminaries, we believe that core values—like confidence and emotional regulation—should be the right of every child, not a luxury.</p>
+                                    <p>Our mission is to make this transformative learning affordable and accessible for all families. We are here to help build a better world—one filled with mentally strong, emotionally intelligent, and deeply connected human beings.</p>
+                                </div>
+
+                                <div class="vision-modal-image">
+                                    <img src="images/approach-image-1.png" alt="Bear with Trophy">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="col-xl-6">
-                        <!-- Approach Item Start -->
                         <div class="approach-item box-2 wow fadeInUp" data-wow-delay="0.4s">
-                            <!-- Approach Item Content Box Start -->
                             <div class="approach-item-content-box">
                                 <div class="icon-box">
                                     <img src="images/icon-approach-item-2.svg" alt="">
@@ -327,25 +350,47 @@
                                 <div class="approach-item-info">
                                     <div class="approach-item-content">
                                         <h3>Our Vision</h3>
-                                        <p>To nurture the whole child: physical, cognitive, social, and emotional by
-                                            fostering curiosity and independence rather than rote learning.</p>
+                                        <p class="approach-text">
+                                            At Little Luminaries, we believe real confidence and resilience aren’t born from constant praise or comparison. They grow from deep acceptance...
+                                        </p>
                                     </div>
                                     <div class="approach-item-btn">
-                                        <a href="contact.html" class="btn-default">Contact Us</a>
+                                       <a href="javascript:void(0)" 
+                                            class="btn-default" 
+                                            onclick="openVisionModal()">
+                                            Read More
+                                        </a>
                                     </div>
                                 </div>
                             </div>
-                            <!-- Approach Item Content Box End -->
-
-                            <!-- Approach Item Image Start -->
                             <div class="approach-item-image">
                                 <figure>
                                     <img src="images/approach-image-2.png" alt="">
                                 </figure>
                             </div>
-                            <!-- Approach Item Image End -->
                         </div>
-                        <!-- Approach Item End -->
+                    </div>
+                   <div id="visionPopup" class="custom-modal">
+                        <div class="modal-content-custom vision-modal-bg">
+                            <span class="close-btn" onclick="closeVisionModal()">&times;</span>
+                            
+                            <div class="vision-modal-layout">
+                                <div class="vision-modal-text">
+                                    <div class="vision-icon-box">
+                                        <img src="images/icon-approach-item-2.svg" alt="Vision Icon">
+                                    </div>
+                                    <h3>Our Vision</h3>
+                                    <p>At Little Luminaries, we believe real confidence and resilience aren’t born from constant praise or comparison. They grow from deep acceptance, authentic connection, and pride in one’s roots, culture, and family.</p>
+                                    <p>In a world where children are often taught to measure their worth by others’ opinions or to forget their roots just to “fit in,” we are determined to be different.</p>
+                                    <p>Children, as social beings, long to belong. But when fitting in means compromising our values or losing touch with our true selves, genuine confidence cannot thrive.</p>
+                                    <p>We see this cycle—and we refuse to accept it.</p>
+                                </div>
+
+                                <div class="vision-modal-image">
+                                    <img src="images/approach-image-2.png" alt="Bear Painting">
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="col-lg-12">
@@ -425,17 +470,17 @@
                                     <div class="satisfy-client-images">
                                         <div class="satisfy-client-image">
                                             <figure class="image-anime">
-                                                <img src="images/author-1.jpg" alt="">
+                                                <img src="images/author-1.png" alt="">
                                             </figure>
                                         </div>
                                         <div class="satisfy-client-image">
                                             <figure class="image-anime">
-                                                <img src="images/author-2.jpg" alt="">
+                                                <img src="images/author-2.png" alt="">
                                             </figure>
                                         </div>
                                         <div class="satisfy-client-image">
                                             <figure class="image-anime">
-                                                <img src="images/author-3.jpg" alt="">
+                                                <img src="images/author-3.png" alt="">
                                             </figure>
                                         </div>
                                     </div>
@@ -811,6 +856,50 @@
         <script src="js/wow.min.js"></script>
         <!-- Main Custom js file -->
         <script src="js/function.js"></script>
+
+        <script>
+            function openVisionModal() {
+                document.getElementById("visionPopup").style.display = "block";
+                document.body.style.overflow = "hidden"; // Stops background scrolling
+            }
+
+            function closeVisionModal() {
+                document.getElementById("visionPopup").style.display = "none";
+                document.body.style.overflow = "auto"; // Restores scrolling
+            }
+
+            // Close if user clicks outside the white box
+            window.onclick = function(event) {
+                let modal = document.getElementById("visionPopup");
+                if (event.target == modal) {
+                    closeVisionModal();
+                }
+            }
+        </script>
+        <script>
+            function openMissionModel() {
+                document.getElementById("missionPopup").style.display = "block";
+                document.body.style.overflow = "hidden"; // Stop background scroll
+            }
+
+            function closeMissionModal() {
+                document.getElementById("missionPopup").style.display = "none";
+                document.body.style.overflow = "auto"; // Resume background scroll
+            }
+
+            // Updated window.onclick to handle both modals closing if user clicks outside
+            window.onclick = function(event) {
+                let vModal = document.getElementById("visionPopup");
+                let mModal = document.getElementById("missionPopup");
+                
+                if (event.target == vModal) {
+                    closeVisionModal();
+                }
+                if (event.target == mModal) {
+                    closeMissionModal();
+                }
+            }
+        </script>
 </body>
 
 </html>

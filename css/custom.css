@@ -12701,3 +12701,263 @@ header.main-header .header-sticky.active {
 		grid-template-columns: repeat(1, 1fr);
 	}
 }
+
+
+
+/* Vision and mission pop up */
+
+/* Modal / Pop-up Background */
+.custom-modal {
+    display: none; 
+    position: fixed; 
+    z-index: 9999; 
+    left: 0; top: 0;
+    width: 100%; height: 100%; 
+    background-color: rgba(0, 0, 0, 0.7); 
+    backdrop-filter: blur(5px);
+}
+
+/* Modal Content Box */
+.modal-content-custom {
+    background-color: #fff;
+    margin: 10% auto; 
+    padding: 35px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    animation: zoomIn 0.3s ease;
+}
+
+.close-btn {
+    position: absolute;
+    right: 25px; top: 15px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #888;
+}
+
+.close-btn:hover { color: white; }
+
+@keyframes zoomIn {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* Vision Modal Specific Background */
+.modal-content-custom.vision-modal-bg {
+    background-color: #004a61; /* Dark Teal Background */
+    margin: 5% auto; 
+    padding: 50px;
+    border-radius: 30px;
+    width: 85%;
+    max-width: 1000px;
+    position: relative;
+    color: #ffffff;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+}
+
+/* Orange Circle Icon Container for Vision */
+.vision-icon-box {
+    width: 65px;
+    height: 65px;
+    background: #ff6b4a; /* Orange Background for Vision Icon */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+/* Icon Color (White on Orange) */
+.vision-icon-box img {
+    width: 35px;
+    filter: brightness(0) invert(1); 
+}
+
+/* shared layout for both popups */
+.vision-modal-layout {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.vision-modal-text {
+    flex: 1.3;
+}
+
+.vision-modal-image {
+    flex: 0.7;
+    text-align: right;
+}
+
+.vision-modal-image img {
+    max-width: 110%; /* Makes the image pop slightly out if needed */
+    height: auto;
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.2));
+}
+
+/* Typography Consistency */
+.vision-modal-text h3 {
+    font-size: 36px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.vision-modal-text p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Responsive Mobile Fix */
+@media (max-width: 991px) {
+    .vision-modal-layout {
+        flex-direction: column;
+        text-align: center;
+    }
+    .vision-modal-image {
+        order: -1;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .vision-modal-bg {
+        padding: 30px;
+    }
+}
+
+/* Mission Modal Specific Background */
+.modal-content-custom.mission-modal-bg {
+    background-color: #ff6b4a; /* Orange Background */
+    margin: 5% auto; 
+    padding: 50px;
+    border-radius: 30px;
+    width: 85%;
+    max-width: 1000px;
+    position: relative;
+    color: #ffffff;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+}
+
+/* White Circle Icon Container for Mission */
+.mission-icon-box {
+    width: 65px;
+    height: 65px;
+    background: #004a61; 
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+/* Icon Color Adjustment */
+.mission-icon-box img {
+    width: 35px;
+    filter: brightness(0) invert(1); 
+}
+
+/* Shared Layout Styles (If not already added from Vision) */
+.vision-modal-layout {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.vision-modal-text {
+    flex: 1.2;
+}
+
+.vision-modal-text h3 {
+    font-size: 36px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.vision-modal-text p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: 15px;
+}
+
+.vision-modal-image {
+    flex: 0.8;
+    text-align: right;
+}
+
+.vision-modal-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsive for Mobile */
+@media (max-width: 991px) {
+    .vision-modal-layout { flex-direction: column; text-align: center; }
+    .vision-modal-image { order: -1; margin-bottom: 20px; }
+}
+
+
+/* Tablet and Mobile Styles */
+@media (max-width: 991px) {
+    .modal-content-custom.vision-modal-bg, 
+    .modal-content-custom.mission-modal-bg {
+        width: 95%;
+        margin: 2% auto;
+        padding: 30px 20px;
+        /* Enable scrolling inside the popup for small screens */
+        max-height: 90vh;
+        overflow-y: auto; 
+    }
+
+    .vision-modal-layout {
+        flex-direction: column; /* Stacks image and text vertically */
+        gap: 20px;
+        text-align: center;
+    }
+
+    /* Make the image smaller on mobile */
+    .vision-modal-image {
+        order: -1; /* Puts image at the top */
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .vision-modal-image img {
+        max-width: 180px; /* Small image size for mobile */
+        height: auto;
+    }
+
+    .vision-modal-text h3 {
+        font-size: 24px; /* Smaller heading for mobile */
+        margin-bottom: 15px;
+    }
+
+    .vision-modal-text p {
+        font-size: 15px; /* Comfortable reading size */
+        line-height: 1.6;
+    }
+
+    .vision-icon-box, .mission-icon-box {
+        margin: 0 auto 15px; /* Centers the icon circle */
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* Specific fix for very small phones */
+@media (max-width: 480px) {
+    .modal-content-custom.vision-modal-bg, 
+    .modal-content-custom.mission-modal-bg {
+        padding: 40px 15px 20px; /* Extra top padding for the X button */
+    }
+
+    .vision-modal-image img {
+        max-width: 140px; /* Even smaller image for small phones */
+    }
+}
