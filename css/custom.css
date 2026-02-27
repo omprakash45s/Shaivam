@@ -3657,6 +3657,7 @@ header.main-header .header-sticky.active {
 .approach-item-image {
 	width: 55%;
 	align-content: end;
+
 }
 
 .approach-item-image figure {
@@ -3666,10 +3667,26 @@ header.main-header .header-sticky.active {
 }
 
 .approach-item-image img {
-	width: 100%;
-	aspect-ratio: 1 / 0.985;
-	object-fit: cover;
-	border-radius: 10px 10px 0 0;
+    width: 100%;
+    aspect-ratio: 1 / 0.985;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    
+    /* Animation Properties */
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Define the movement */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px); /* Moves up by 10 pixels */
+    }
+    100% {
+        transform: translateY(0px);
+	}
 }
 
 .our-expertise {
