@@ -446,6 +446,18 @@ a:focus {
 	background-color: #FF5E20;
 }
 
+.bg-blue {
+	background-color: #0928a7;
+}
+
+.bg-green {
+	background-color: #04521c;
+}
+
+.bg-red {
+	background-color: #910808;
+}
+
 /* Button spacing adjustment */
 .expertise-btn {
 	margin-top: 20px;
@@ -3682,7 +3694,7 @@ header.main-header .header-sticky.active {
         transform: translateY(0px);
     }
     50% {
-        transform: translateY(-10px); /* Moves up by 10 pixels */
+        transform: translateY(-20px); /* Moves up by 10 pixels */
     }
     100% {
         transform: translateY(0px);
@@ -3791,38 +3803,6 @@ header.main-header .header-sticky.active {
 	border-radius: 20px;
 }
 
-.play-video-circle {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	z-index: 1;
-}
-
-.play-video-circle a {
-	display: inline-block;
-	border-radius: 50%;
-	cursor: none;
-	backdrop-filter: blur(20px);
-	-webkit-backdrop-filter: blur(20px);
-}
-
-.play-video-circle a img {
-	width: 100%;
-	max-width: 160px;
-	border-radius: 50%;
-	animation: infiniterotate 20s infinite linear;
-}
-
-@keyframes infiniterotate {
-	100% {
-		transform: rotate(360deg);
-	}
-}
-
-.play-video-circle a:hover img {
-	animation-play-state: paused;
-}
 
 .how-it-work {
 	padding: 100px 0;
