@@ -200,6 +200,32 @@
 		});
 	}
 
+	/* Workshop Slider JS */
+	if ($('.workshop-slider').length) {
+		const workshop_slider = new Swiper('.workshop-slider', {
+			slidesPerView: 1,
+			speed: 1000,
+			spaceBetween: 30,
+			loop: true,
+			autoplay: {
+				delay: 5000,
+				disableOnInteraction: false,
+			},
+			pagination: {
+				el: '.workshop-pagination',
+				clickable: true,
+			},
+			breakpoints: {
+				768: {
+					slidesPerView: 1,
+				},
+				991: {
+					slidesPerView: 1,
+				}
+			}
+		});
+	}
+
 	/* Skill Bar */
 	if ($('.skills-progress-bar').length) {
 		$('.skills-progress-bar').waypoint(function () {
